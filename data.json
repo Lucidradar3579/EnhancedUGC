@@ -1,0 +1,30 @@
+{
+  "items": {
+    "12345678": {
+      "name": "Fancy Hat",
+      "dev": "Cain",
+      "thumbnail": "",
+      "sales_count": 0,
+      "robux_earned": 0
+    },
+    "23456789": {
+      "name": "Cool Glasses",
+      "dev": "Leo",
+      "thumbnail": "",
+      "sales_count": 0,
+      "robux_earned": 0
+    },
+    "34567890": {
+      "name": "Sparkly Cape",
+      "dev": "Charl",
+      "thumbnail": "",
+      "sales_count": 0,
+      "robux_earned": 0
+    }
+  },
+  "earnings": {
+    "Cain": 0,
+    "Leo": 0,
+    "Charl": 0
+  }
+}
