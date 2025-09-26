@@ -1,0 +1,2 @@
+# EnhancedUGC
+UGC earnings data
