@@ -2,9 +2,11 @@ import requests
 import json
 import os
 
-API_KEY = os.getenv("EQlpgpC4UUiCC8mWFTZoz0+lG8RvCbf//Dkkvi4tpqL+H0QCZXlKaGJHY2lPaUpTVXpJMU5pSXNJbXRwWkNJNkluTnBaeTB5TURJeExUQTNMVEV6VkRFNE9qVXhPalE1V2lJc0luUjVjQ0k2SWtwWFZDSjkuZXlKaGRXUWlPaUpTYjJKc2IzaEpiblJsY201aGJDSXNJbWx6Y3lJNklrTnNiM1ZrUVhWMGFHVnVkR2xqWVhScGIyNVRaWEoyYVdObElpd2lZbUZ6WlVGd2FVdGxlU0k2SWtWUmJIQm5jRU0wVlZWcFEwTTRiVmRHVkZwdmVqQXJiRWM0VW5aRFltWXZMMFJyYTNacE5IUndjVXdyU0RCUlF5SXNJbTkzYm1WeVNXUWlPaUkwTmpNek5qQTJNVGtpTENKbGVIQWlPakUzTlRnNE5EYzNNamdzSW1saGRDSTZNVGMxT0RnME5ERXlPQ3dpYm1KbUlqb3hOelU0T0RRME1USTRmUS5oRE1KeWQ2V3R6R3V1bUwwd2hDT1cwVW9zY1pZU1NHXzQySjhzdF9xNVRwOTQtN19RVGtvQXBhdWJDN0FGUHg4VlU5dkZXeXEwTE9sS2o5MC1qeFlrM1NETjhvM3RPZ2ltX1gzQmEwYjVVcVZUazJoNDlDSS1OTjhPcmNPcjViOEdVaXBCYk5EWG1YNEYtSDJDWXppZTB4UE5FNEVobExCREd3Qm40Q2NXOHR3SjYyM20tRzNVZ200U3ExV0wzU0gzc3FiRV9ORnFjQkhqRWFZekNFRlpHMVZ6U0cxcVRHRDNSMHpVb2FfZVBQNHJ4YXRzSXFYZ0JFRGZaME1GU2N3Mk9zOGVOUkZfOF9QWVl6LW1nNGxmYUVFTnI3eW1BS2lEYWZwdWI0ZGw0SVlvZ2Z3Y0RaVU5wdDhyZ1laMnJKUlZkSVB0WjF1R0UzSDBhbkpUTjRBZFE=")  # Put your Roblox API key in an environment variable
+# Roblox API key from environment variable
+API_KEY = os.getenv("EQlpgpC4UUiCC8mWFTZoz0+lG8RvCbf//Dkkvi4tpqL+H0QCZXlKaGJHY2lPaUpTVXpJMU5pSXNJbXRwWkNJNkluTnBaeTB5TURJeExUQTNMVEV6VkRFNE9qVXhPalE1V2lJc0luUjVjQ0k2SWtwWFZDSjkuZXlKaGRXUWlPaUpTYjJKc2IzaEpiblJsY201aGJDSXNJbWx6Y3lJNklrTnNiM1ZrUVhWMGFHVnVkR2xqWVhScGIyNVRaWEoyYVdObElpd2lZbUZ6WlVGd2FVdGxlU0k2SWtWUmJIQm5jRU0wVlZWcFEwTTRiVmRHVkZwdmVqQXJiRWM0VW5aRFltWXZMMFJyYTNacE5IUndjVXdyU0RCUlF5SXNJbTkzYm1WeVNXUWlPaUkwTmpNek5qQTJNVGtpTENKbGVIQWlPakUzTlRnNE5EYzNNamdzSW1saGRDSTZNVGMxT0RnME5ERXlPQ3dpYm1KbUlqb3hOelU0T0RRME1USTRmUS5oRE1KeWQ2V3R6R3V1bUwwd2hDT1cwVW9zY1pZU1NHXzQySjhzdF9xNVRwOTQtN19RVGtvQXBhdWJDN0FGUHg4VlU5dkZXeXEwTE9sS2o5MC1qeFlrM1NETjhvM3RPZ2ltX1gzQmEwYjVVcVZUazJoNDlDSS1OTjhPcmNPcjViOEdVaXBCYk5EWG1YNEYtSDJDWXppZTB4UE5FNEVobExCREd3Qm40Q2NXOHR3SjYyM20tRzNVZ200U3ExV0wzU0gzc3FiRV9ORnFjQkhqRWFZekNFRlpHMVZ6U0cxcVRHRDNSMHpVb2FfZVBQNHJ4YXRzSXFYZ0JFRGZaME1GU2N3Mk9zOGVOUkZfOF9QWVl6LW1nNGxmYUVFTnI3eW1BS2lEYWZwdWI0ZGw0SVlvZ2Z3Y0RaVU5wdDhyZ1laMnJKUlZkSVB0WjF1R0UzSDBhbkpUTjRBZFE=")
 DATA_FILE = "data.json"
 
+# UGC items
 items = {
     "463966667": {"dev": "Cain", "name": "Scarlet Witch Crown", "thumbnail": ""},
     "463966668": {"dev": "Cain", "name": "Lady Death Crown", "thumbnail": ""},
@@ -12,21 +14,24 @@ items = {
     "204792414": {"dev": "Leo", "name": "Dreamwalking", "thumbnail": ""}
 }
 
-earnings = {dev: 0 for dev in ["Cain", "Leo", "Charl"]}
+# Initialize earnings
+earnings = {dev: 0 for dev in ["Cain", "Leo"]}
 
+# Fetch UGC sales
 def get_ugc_sales(item_id):
     url = f"https://apis.roblox.com/marketplace/v1/items/{item_id}/sales"
     headers = {"Authorization": f"Bearer {API_KEY}"}
     try:
-        response = requests.get(url, headers=headers)
-        if response.status_code != 200:
-            print(f"[Warning] Failed to get sales for {item_id}: {response.status_code}")
+        res = requests.get(url, headers=headers)
+        if res.status_code != 200:
+            print(f"[Warning] Failed to fetch {item_id}: {res.status_code}")
             return []
-        return response.json()
+        return res.json()
     except Exception as e:
         print(f"[Error] Request failed for {item_id}: {e}")
         return []
 
+# Build JSON data
 item_data = {}
 for item_id, info in items.items():
     sales = get_ugc_sales(item_id)
@@ -40,12 +45,10 @@ for item_id, info in items.items():
         "robux_earned": total_robux
     }
 
-data = {
-    "items": item_data,
-    "earnings": earnings
-}
+data = {"items": item_data, "earnings": earnings}
 
+# Write to JSON file
 with open(DATA_FILE, "w") as f:
     json.dump(data, f, indent=4)
 
-print("Earnings updated successfully!")
+print("✅ Earnings updated successfully!")
