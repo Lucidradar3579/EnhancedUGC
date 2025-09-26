@@ -7,7 +7,7 @@
       "sales_count": 0,
       "robux_earned": 0
     },
-    "463966667": {
+    "463966668": {
       "name": "Lady Death Crown",
       "dev": "Cain",
       "thumbnail": "",
@@ -15,20 +15,20 @@
       "robux_earned": 0
     },
     "204792413": {
-      "name": "Magic play",
+      "name": "Magic Play",
       "dev": "Leo",
       "thumbnail": "",
       "sales_count": 0,
       "robux_earned": 0
     },
-   "204792413": {
+    "204792414": {
       "name": "Dreamwalking",
       "dev": "Leo",
       "thumbnail": "",
       "sales_count": 0,
       "robux_earned": 0
-},
-  
+    }
+  },
   "earnings": {
     "Cain": 0,
     "Leo": 0,
